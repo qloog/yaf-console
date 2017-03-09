@@ -1,0 +1,14 @@
+{
+    "name": "phpcasts/yaf-console",
+    "description": "make controller,model,plugin,view by this tool",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qloog",
+            "email": "quanlongwang@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
