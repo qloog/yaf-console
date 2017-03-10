@@ -1,6 +1,7 @@
 {
     "name": "phpcasts/yaf-console",
     "description": "make controller,model,plugin,view by this tool",
+    "keywords": ["yaf-console","yaf generator","yaf组件生成器"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,6 +10,11 @@
             "email": "quanlongwang@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "PHPCasts\\": "src/"
+        }
+    },
     "minimum-stability": "stable",
     "require": {
         "symfony/console": "^3.2"
