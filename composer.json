@@ -3,6 +3,7 @@
     "description": "make controller,model,plugin,view by this tool",
     "keywords": ["yaf-console","yaf generator","yaf组件生成器"],
     "type": "library",
+    "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +16,6 @@
             "PHPCasts\\": "src/"
         }
     },
-    "minimum-stability": "stable",
     "require": {
         "symfony/console": "^3.2"
     }
