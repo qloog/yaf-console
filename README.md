@@ -1,0 +1,1 @@
+主要用于通过命令生成controller,model,view,plugin等
