@@ -32,14 +32,15 @@ class GenerateController extends Command
         if (defined('APP_PATH')) {
             // eg: {module}/{controller}
             if (count($moduleController = explode('/', $controllerName)) == 2) {
-                $moduleName = $moduleController[0];
-                $controllerName = $moduleController[1];
+                $moduleName = ucfirst($moduleController[0]);
+                $controllerName = ucfirst($moduleController[1]);
                 $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR  . $moduleName . DIRECTORY_SEPARATOR . 'controllers';
                 if (!file_exists($controllerPath)) {
-                    throw new \Exception("module dir:{$moduleName} is not exist, you can use: make:module to generate.");
+                    throw new \Exception("module:{$moduleName} is not exist, you can use: make:module to generate.");
                 }
             } else {
                 $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'controllers';
+                $controllerName = ucfirst($controllerName);
             }
 
             $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');

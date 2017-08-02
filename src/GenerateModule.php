@@ -27,6 +27,7 @@ class GenerateModule extends Command
         ]);
 
         $moduleName = $input->getArgument('module_name');
+        $moduleName = ucfirst($moduleName);
 
         if (defined('APP_PATH')) {
             if (!is_writable(dirname(APP_PATH))) {
