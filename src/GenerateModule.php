@@ -33,10 +33,10 @@ class GenerateModule extends Command
                 throw new \Exception('Access deny');
             }
 
-            $modulePathWithController = APP_PATH . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR  . $moduleName . DIRECTORY_SEPARATOR . 'controllers';
-            $result = mkdir($modulePathWithController, 0755, true);
+            $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR  . $moduleName . DIRECTORY_SEPARATOR . 'controllers';
+            $result = mkdir($controllerPath, 0755, true);
             if (!$result) {
-                $output->writeln("make dir: {$modulePathWithController} failure");
+                $output->writeln("make dir: {$controllerPath} failure");
                 return false;
             }
 
@@ -44,7 +44,7 @@ class GenerateModule extends Command
             $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
             $data = sprintf($template, $controllerName);
             $this->generate(
-                $modulePathWithController . DIRECTORY_SEPARATOR . $controllerName . '.php',
+                $controllerPath . DIRECTORY_SEPARATOR . $controllerName . '.php',
                 $data,
                 $input,
                 $output

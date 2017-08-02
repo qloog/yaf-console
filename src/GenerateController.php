@@ -26,20 +26,33 @@ class GenerateController extends Command
             'generating...',
         ]);
 
-        $controller_name = $input->getArgument('controller_name');
+        // {module}/{controller} or {controller}
+        $controllerName = $input->getArgument('controller_name');
 
         if (defined('APP_PATH')) {
+            // eg: {module}/{controller}
+            if (count($moduleController = explode('/', $controllerName)) == 2) {
+                $moduleName = $moduleController[0];
+                $controllerName = $moduleController[1];
+                $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR  . $moduleName . DIRECTORY_SEPARATOR . 'controllers';
+                if (!file_exists($controllerPath)) {
+                    $output->writeln("<error>module:{$moduleName} dir is not exist.</error>");
+                }
+            } else {
+                $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'controllers';
+            }
+
             $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
-            $data = sprintf($template, $controller_name);
+            $data = sprintf($template, $controllerName);
             $this->generate(
-                APP_PATH . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . $controller_name . '.php',
+                $controllerPath . DIRECTORY_SEPARATOR . $controllerName . '.php',
                 $data,
                 $input,
                 $output
             );
-            $output->writeln('controller ' . $controller_name . ' generate successfully.');
+            $output->writeln('<info>controller ' . $controllerName . ' generate successfully.</info>');
         } else {
-            $output->writeln('generating controller failure');
+            $output->writeln('<error>generating controller failure.</error>');
         }
     }
 }
