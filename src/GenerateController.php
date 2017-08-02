@@ -36,7 +36,7 @@ class GenerateController extends Command
                 $controllerName = $moduleController[1];
                 $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR  . $moduleName . DIRECTORY_SEPARATOR . 'controllers';
                 if (!file_exists($controllerPath)) {
-                    $output->writeln("<error>module:{$moduleName} dir is not exist.</error>");
+                    throw new \Exception("module dir:{$moduleName} is not exist, you can use: make:module to generate.");
                 }
             } else {
                 $controllerPath = APP_PATH . DIRECTORY_SEPARATOR . 'controllers';
