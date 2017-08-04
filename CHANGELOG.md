@@ -1,3 +1,5 @@
+## v1.2.0 - 2017-08-04
+ - 修改composer.json的autoload （'PHPCasts' -> 'PHPCasts\\Console'）
 
 ## v1.1.0 - 2017-08-02
  - 支持生成 module
