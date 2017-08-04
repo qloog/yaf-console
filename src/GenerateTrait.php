@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts;
+namespace PHPCasts\Console;
 
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 
