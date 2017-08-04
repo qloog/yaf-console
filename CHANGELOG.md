@@ -1,3 +1,6 @@
+## v1.2.1 - 2017-08-04
+ - fixed autoload namespace （'PHPCasts\\Console' -> 'PHPCasts\\Console\\'）
+ 
 ## v1.2.0 - 2017-08-04
  - 修改composer.json的autoload （'PHPCasts' -> 'PHPCasts\\Console'）
 

@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PHPCasts\\Console": "src/"
+            "PHPCasts\\Console\\": "src/"
         }
     },
     "require": {
