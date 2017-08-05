@@ -14,11 +14,12 @@
 
 ## 配置
 
-yaf配置开启 `af.use_namespace = true ` 和 `yaf.use_spl_autoload=1 `
+yaf配置开启 `yaf.use_namespace = true ` 和 `yaf.use_spl_autoload=1 `
 
 ## 创建Console文件
 
 ```shell
+cd /path/to/app_root    //cd到项目根目录
 mkdir bin
 vim bin/console
 ```
