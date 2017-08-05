@@ -61,3 +61,7 @@ php bin/console make:controller Web/User	// 在Web模块下创建控制器
 php bin/console make:model User // 创建模型
 php bin/console make:plugin Test	// 创建插件
 ```
+
+## todo
+
+ - 新增 php bin/console serve
