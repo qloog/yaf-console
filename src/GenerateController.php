@@ -16,6 +16,7 @@ class GenerateController extends Command
         $this
             ->setName('make:controller')
             ->addArgument('controller_name', InputArgument::REQUIRED, 'The name of controller.')
+            ->addOption('--resource', '-r')
             ->setDescription('Create new controller.')
             ->setHelp('This command allows you create a controller.');
     }
@@ -28,6 +29,8 @@ class GenerateController extends Command
 
         // {module}/{controller} or {controller}
         $controllerName = $input->getArgument('controller_name');
+
+        $resource = $input->getOption('--resource');
 
         if (defined('APP_PATH')) {
             // eg: {module}/{controller}
@@ -43,7 +46,13 @@ class GenerateController extends Command
                 $controllerName = ucfirst($controllerName);
             }
 
-            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
+            $resource = $input->getOption('--resource');
+            if ($resource) {
+                $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Resource.php');
+            } else {
+                $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
+            }
+
             $data = sprintf($template, $controllerName);
             $this->generate(
                 $controllerPath . DIRECTORY_SEPARATOR . $controllerName . '.php',
