@@ -43,7 +43,7 @@ class GenerateController extends Command
                 $controllerName = ucfirst($controllerName);
             }
 
-            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
+            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Controller.php');
             $data = sprintf($template, $controllerName);
             $this->generate(
                 $controllerPath . DIRECTORY_SEPARATOR . $controllerName . '.php',

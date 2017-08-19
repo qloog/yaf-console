@@ -29,7 +29,7 @@ class GeneratePlugin extends Command
         $plugin_name = $input->getArgument('plugin_name');
 
         if (defined('APP_PATH')) {
-            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Plugin.php');
+            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Plugin.php');
             $data = sprintf($template, $plugin_name);
             $this->generate(
                 APP_PATH . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $plugin_name . '.php',
