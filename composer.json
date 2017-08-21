@@ -13,10 +13,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "PHPCasts\\Console\\": "src/"
+            "PHPCasts\\Console\\": "src/",
+            "Symfony\\Component\\Process\\": ""
         }
     },
     "require": {
-        "symfony/console": "^3.2"
+        "symfony/console": "^3.2",
+        "symfony/process": "^3.2"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }
