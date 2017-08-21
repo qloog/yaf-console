@@ -29,7 +29,7 @@ class GenerateModel extends Command
         $model_name = $input->getArgument('model_name');
 
         if (defined('APP_PATH')) {
-            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Model.php');
+            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Model.stub');
             $data = sprintf($template, $model_name);
             $this->generate(
                 APP_PATH . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . $model_name . '.php',

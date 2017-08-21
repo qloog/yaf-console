@@ -42,7 +42,7 @@ class GenerateModule extends Command
             }
 
             $controllerName = 'Index';
-            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Controller.php');
+            $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Controller.stub');
             $data = sprintf($template, $controllerName);
             $this->generate(
                 $controllerPath . DIRECTORY_SEPARATOR . $controllerName . '.php',
