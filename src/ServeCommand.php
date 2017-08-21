@@ -29,17 +29,17 @@ class ServeCommand extends Command
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        if (!defined('ROOT_PATH')) {
-            $this->$this->output->writeln("Not have define ROOT_PATH in bin/Console");
+        if (!defined('APP_ROOT')) {
+            $output->writeln("Not have define ROOT_PATH in bin/Console");
             return;
         }
-        chdir(ROOT_PATH);
+        chdir(APP_ROOT);
 
         $host = $input->getOption('host');
 
         $port = $input->getOption('port');
 
-        $base = ROOT_PATH;
+        $base = APP_ROOT;
 
         $binary = (new PhpExecutableFinder)->find(false);
 
