@@ -1,6 +1,9 @@
-# v1.2.2 - 2017-08-21
+# v1.3.1 - 2017-08-21
  - 修改模板目录为Stubs 
  - 修改模板文件后缀为stub
+
+## v1.3.0 - 2017-08-10
+ - make:controller支持 `--resource` 参数, 可生成带REST风格的Controller
  
 ## v1.2.1 - 2017-08-04
  - fixed autoload namespace （'PHPCasts\\Console' -> 'PHPCasts\\Console\\'）

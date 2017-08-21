@@ -66,3 +66,7 @@ php bin/console make:plugin Test	// 创建插件
 ## 修改日志
 
 详见 [changelog](./CHANGELOG.md)
+
+## todo
+
+ - 新增 php bin/console serve
