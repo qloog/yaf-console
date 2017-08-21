@@ -30,8 +30,6 @@ class GenerateController extends Command
         // {module}/{controller} or {controller}
         $controllerName = $input->getArgument('controller_name');
 
-        $resource = $input->getOption('--resource');
-
         if (defined('APP_PATH')) {
             // eg: {module}/{controller}
             if (count($moduleController = explode('/', $controllerName)) == 2) {
