@@ -16,7 +16,7 @@ class GenerateController extends Command
         $this
             ->setName('make:controller')
             ->addArgument('controller_name', InputArgument::REQUIRED, 'The name of controller.')
-            ->addOption('--resource', '-r')
+            ->addOption('resource', '-r')
             ->setDescription('Create new controller.')
             ->setHelp('This command allows you create a controller.');
     }
@@ -44,7 +44,7 @@ class GenerateController extends Command
                 $controllerName = ucfirst($controllerName);
             }
 
-            $resource = $input->getOption('--resource');
+            $resource = $input->getOption('resource');
             if ($resource) {
                 $template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Resource.stub');
             } else {

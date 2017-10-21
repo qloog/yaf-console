@@ -82,14 +82,15 @@ require_once __DIR__.'/public/index.php';
 
 ```shell
 php bin/console  // 查看可用命令
-php bin/console make:module Web	// 创建Web模块
-php bin/console make:controller User	// 创建控制器
-php bin/console make:controller User --resource	// 创建含有增删改查的控制器
-php bin/console make:controller Web/User	// 在Web模块下创建控制器
-php bin/console make:model User // 创建模型
-php bin/console make:plugin Test	// 创建插件
+php bin/console make:module Web                         // 创建Web模块
+php bin/console make:controller User                    // 创建控制器
+php bin/console make:controller User --resource         // 创建含有增删改查的控制器
+php bin/console make:controller Web/User                // 在Web模块下创建控制器
+php bin/console make:controller Web/User  --resource    // 在Web模块下创建控制器
+php bin/console make:model User                         // 创建模型
+php bin/console make:plugin Test                        // 创建插件
 
-php bin/console serve	// 运行本应用
+php bin/console serve                                   // 运行本应用
 ```
 
 ## 修改日志

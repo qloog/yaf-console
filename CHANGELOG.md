@@ -1,3 +1,7 @@
+# v1.3.3 - 2017-10-21
+ - 修复运行make:controller时, 带 `--resource` 的报错
+ - 格式化 `resource.stub` 模板文件
+ 
 # v1.3.2 - 2017-08-21
  - 增加 `php bin/console serve` 命令
 

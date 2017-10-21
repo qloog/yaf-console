@@ -1,7 +1,9 @@
 <?php
 $str = <<< TEMPLATE
 <?php
+
 use Yaf\Controller_Abstract;
+
 class %sController extends Controller_Abstract
 {
 	/**
@@ -31,36 +33,32 @@ class %sController extends Controller_Abstract
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
      */
-    public function showAction($id)
+    public function showAction()
     {
         //
     }
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
      */
-    public function editAction($id)
+    public function editAction()
     {
         //
     }
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
      */
-    public function updateAction($id)
+    public function updateAction()
     {
         //
     }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
      */
-    public function destroyAction($id)
+    public function destroyAction()
     {
         //
     }
