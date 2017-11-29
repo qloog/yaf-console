@@ -4,13 +4,15 @@
 
 ## 依赖
 
- - yaf
- - composer
- - console文件
+ - Yaf
+ - Composer
+ - Console文件
 
 ## 安装
 
-` composer require "phpcasts/yaf-library:dev-master" -vvv `
+```shell
+composer require "phpcasts/yaf-library:dev-master" -vvv 
+```
 
 ## 配置
 
