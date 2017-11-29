@@ -16,7 +16,11 @@ composer require "phpcasts/yaf-library:dev-master" -vvv
 
 ## 配置
 
-yaf配置开启 `yaf.use_namespace = true ` 和 `yaf.use_spl_autoload=1 `
+yaf配置开启:
+ ```
+ yaf.use_namespace = true
+ yaf.use_spl_autoload = 1 
+ ```
 
 ## 创建Console文件
 
@@ -98,4 +102,4 @@ php bin/console serve                                   // 运行本应用
 
 ## 修改日志
 
-详见 [changelog](./CHANGELOG.md)
+详见 [Changelog](./CHANGELOG.md)
