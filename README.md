@@ -1,3 +1,5 @@
+# yaf-console
+
 ## 简介
 
 快速生成对应的module、controller、model、plugin。
