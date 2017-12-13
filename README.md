@@ -6,17 +6,27 @@
 
 ## 依赖
 
- - yaf
- - composer
- - console文件
+ - Yaf
+ - Composer
+ - Console文件
 
 ## 安装
 
+<<<<<<< HEAD
 `composer require "phpcasts/yaf-library:dev-master" -vvv `
+=======
+```shell
+composer require "phpcasts/yaf-library:dev-master" -vvv 
+```
+>>>>>>> 2a259b237ba6df554ab4932fd76ea9b59ac60ad4
 
 ## 配置
 
-yaf配置开启 `yaf.use_namespace = true ` 和 `yaf.use_spl_autoload=1 `
+yaf配置开启:
+ ```
+ yaf.use_namespace = true
+ yaf.use_spl_autoload = 1 
+ ```
 
 ## 创建Console文件
 
@@ -83,16 +93,18 @@ require_once __DIR__.'/public/index.php';
 
 ```shell
 php bin/console  // 查看可用命令
-php bin/console make:module Web	// 创建Web模块
-php bin/console make:controller User	// 创建控制器
-php bin/console make:controller User --resource	// 创建含有增删改查的控制器
-php bin/console make:controller Web/User	// 在Web模块下创建控制器
-php bin/console make:model User // 创建模型
-php bin/console make:plugin Test	// 创建插件
+php bin/console make:module Web                         // 创建Web模块
+php bin/console make:controller User                    // 创建控制器
+php bin/console make:controller User --resource         // 创建含有增删改查的控制器
+php bin/console make:controller Web/User                // 在Web模块下创建控制器
+php bin/console make:controller Web/User  --resource    // 在Web模块下创建控制器
+php bin/console make:model User                         // 创建模型
+php bin/console make:plugin Test                        // 创建插件
+// todo more
 
-php bin/console serve	// 运行本应用
+php bin/console serve                                   // 运行本应用
 ```
 
 ## 修改日志
 
-详见 [changelog](./CHANGELOG.md)
+详见 [Changelog](./CHANGELOG.md)
