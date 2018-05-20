@@ -1,4 +1,5 @@
 <?php
+
 $str = <<< TEMPLATE
 <?php
 
@@ -14,6 +15,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -22,6 +24,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -30,6 +33,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Display the specified resource.
      *
@@ -38,6 +42,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -46,6 +51,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -54,6 +60,7 @@ class %sController extends Controller_Abstract
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -64,4 +71,5 @@ class %sController extends Controller_Abstract
     }
 }
 TEMPLATE;
+
 return $str;

@@ -1,3 +1,5 @@
+# yaf-console
+
 ## 简介
 
 快速生成对应的module、controller、model、plugin。
@@ -10,9 +12,13 @@
 
 ## 安装
 
+<<<<<<< HEAD
+`composer require "phpcasts/yaf-library:dev-master" -vvv `
+=======
 ```shell
 composer require "phpcasts/yaf-library:dev-master" -vvv 
 ```
+>>>>>>> 2a259b237ba6df554ab4932fd76ea9b59ac60ad4
 
 ## 配置
 
@@ -81,7 +87,6 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri))
 }
 
 require_once __DIR__.'/public/index.php';
-
 ```
 
 ## 使用
