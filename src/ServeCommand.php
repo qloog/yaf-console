@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Console;
+namespace PHPCasts\Yaf\Console;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Output\OutputInterface;
