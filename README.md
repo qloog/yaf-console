@@ -12,13 +12,9 @@
 
 ## 安装
 
-<<<<<<< HEAD
-`composer require "phpcasts/yaf-library:dev-master" -vvv `
-=======
 ```shell
-composer require "phpcasts/yaf-library:dev-master" -vvv 
+composer require "phpcasts/yaf-console" -vvv 
 ```
->>>>>>> 2a259b237ba6df554ab4932fd76ea9b59ac60ad4
 
 ## 配置
 
@@ -47,14 +43,12 @@ require APP_ROOT . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
-use PHPCasts\Console\GenerateModule;
-use PHPCasts\Console\GenerateController;
-use PHPCasts\Console\GenerateModel;
-use PHPCasts\Console\GeneratePlugin;
-use PHPCasts\Console\Check;
-use PHPCasts\Console\ServeCommand;
-
-
+use PHPCasts\Yaf\Console\GenerateModule;
+use PHPCasts\Yaf\Console\GenerateController;
+use PHPCasts\Yaf\Console\GenerateModel;
+use PHPCasts\Yaf\Console\GeneratePlugin;
+use PHPCasts\Yaf\Console\Check;
+use PHPCasts\Yaf\Console\ServeCommand;
 
 $application = new Application();
 
@@ -68,7 +62,9 @@ $application->add(new ServeCommand());
 
 $application->run();
 ```
+
 ## 创建 Server.php
+
 在项目根目录，创建如下文件
 vim server.php
 ```php
