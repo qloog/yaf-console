@@ -43,21 +43,21 @@ require APP_ROOT . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
-use PHPCasts\Yaf\Console\GenerateModule;
-use PHPCasts\Yaf\Console\GenerateController;
-use PHPCasts\Yaf\Console\GenerateModel;
-use PHPCasts\Yaf\Console\GeneratePlugin;
-use PHPCasts\Yaf\Console\Check;
+use PHPCasts\Yaf\Console\ModuleMakeCommand;
+use PHPCasts\Yaf\Console\ControllerMakeCommand;
+use PHPCasts\Yaf\Console\ModelMakeCommand;
+use PHPCasts\Yaf\Console\PluginMakeCommand;
+use PHPCasts\Yaf\Console\CheckCommand;
 use PHPCasts\Yaf\Console\ServeCommand;
 
 $application = new Application();
 
 // ... register commands
-$application->add(new GenerateModule());
-$application->add(new GenerateController());
-$application->add(new GenerateModel());
-$application->add(new GeneratePlugin());
-$application->add(new Check());
+$application->add(new ModuleMakeCommand());
+$application->add(new GenerateMakeCommand());
+$application->add(new ModelMakeCommand());
+$application->add(new PluginMakeCommand());
+$application->add(new CheckCommand());
 $application->add(new ServeCommand());
 
 $application->run();

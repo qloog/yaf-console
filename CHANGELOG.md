@@ -1,5 +1,6 @@
 # v1.3.4 - 2018-05-20
  - 修改命名空间, 由 `PHPCasts\Console` 调整为 `PHPCasts\Yaf\Console` 
+ - 修改命令文件名
 
 # v1.3.3 - 2017-10-21
  - 修复运行make:controller时, 带 `--resource` 的报错

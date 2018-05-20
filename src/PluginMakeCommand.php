@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class GeneratePlugin extends Command
+class PluginMakeCommand extends Command
 {
     use GenerateTrait;
 
