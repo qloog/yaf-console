@@ -19,7 +19,10 @@
     },
     "require": {
         "symfony/console": "^3.2",
-        "symfony/process": "^3.2"
+        "symfony/process": "^3.2",
+        "illuminate/support": "^5.7@dev",
+        "illuminate/database": "^5.7@dev",
+        "illuminate/filesystem": "^5.7@dev"
     },
     "repositories": {
         "packagist": {
